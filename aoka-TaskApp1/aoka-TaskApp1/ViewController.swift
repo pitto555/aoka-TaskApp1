@@ -9,33 +9,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var textField2: UITextField!
-    @IBOutlet weak var textField3: UITextField!
-    @IBOutlet weak var textField4: UITextField!
-    @IBOutlet weak var textField5: UITextField!
+    @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private weak var textField2: UITextField!
+    @IBOutlet private weak var textField3: UITextField!
+    @IBOutlet private weak var textField4: UITextField!
+    @IBOutlet private weak var textField5: UITextField!
     
-    @IBOutlet weak var answerLabel: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+    @IBOutlet private weak var answerLabel: UILabel!
     
     @IBAction func plusButtonAction(_ sender: Any) {
-        
-        let number:Int = Int(textField.text!) ?? 0
-        let number2:Int = Int(textField2.text!) ?? 0
-        let number3:Int = Int(textField3.text!) ?? 0
-        let number4:Int = Int(textField4.text!) ?? 0
-        let number5:Int = Int(textField5.text!) ?? 0
+
+        let number: Int = Int(textField.text!) ?? 0
+        let number2: Int = Int(textField2.text!) ?? 0
+        let number3: Int = Int(textField3.text!) ?? 0
+        let number4: Int = Int(textField4.text!) ?? 0
+        let number5: Int = Int(textField5.text!) ?? 0
         
         let answer = number + number2 + number3 + number4 + number5
         
         answerLabel.text = "\(answer)"
-        print(answer)
     }
 }
-
-
-
